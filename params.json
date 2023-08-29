@@ -1,0 +1,170 @@
+{
+    "main_img1_path": "./MainImage/Original Input/R353_epb_hg_hg0629.tif",
+    "main_img2_path": "./MainImage/Original Input/R353_iia_cvh_cvh2231.tif",
+    "main_diff_img_path": "./MainImage/Alignment",
+    "auto_crop_image_root_path": "./MainImage",
+    "auto_crop_UNet_path": "./Preprocessing/auto_crop_unet.pth",
+    "auto_crop_eva_predicted_path": "/DATASET/Preprocessing/predicted03-new",
+    "auto_crop_eva_ground_truth_path": "/DATASET/Preprocessing/label_val",
+    "auto_crop_eva_confusion_m_path": "/DATASET/Preprocessing/Eva_output_figure/Confusion_Matrix",
+    "auto_crop_data_mode": [
+        "Defalut",
+        "'Defalut' || 'Batch' -- Whether to process 2 images or many images."
+    ],
+    "auto_crop_morphology_radius": [
+        30,
+        "Default=30 -- Radius of Erosion and Dilation."
+    ],
+    
+
+    "img1_path": "./input_temp/14.png",
+    "img2_path": "./input_temp/15.png",
+    "diff_img_path": "./output_temp",
+    "identical_eva_scale_time_figure_path": "./output_temp/IE_scale_time.png",
+    "identical_eva_scale_error_figure_path": "./output_temp/IE_scale_error.png",
+    "identical_eva_scale_std_figure_path": "./output_temp/IE_scale_std.png",
+    "identical_eva_scale_statistical_figure_path": "./output_temp/IE_scale_statistical.png",
+
+    "identical_eva_scale2_time_figure_path": "./output_temp/IE_scale2pyramid_time.png",
+    "identical_eva_scale2_error_figure_path": "./output_temp/IE_scale2pyramid_error.png",
+    "identical_eva_scale2_std_figure_path": "./output_temp/IE_scale2pyramid_std.png",
+    "identical_eva_scale2_statistical_figure_path": "./output_temp/IE_scale2pyramid_statistical.png",
+
+    "identical_eva_stepsize_time_figure_path": "./output_temp/IE_stepsize_time.png",
+    "identical_eva_stepsize_error_figure_path": "./output_temp/IE_stepsize_error.png",
+    "identical_eva_stepsize_std_figure_path": "./output_temp/IE_stepsize_std.png",
+    "identical_eva_stepsize_statistical_figure_path": "./output_temp/IE_stepsize_statistical.png",
+
+    "identical_eva_feature_mode_time_figure_path": "./output_temp/IE_feature_mode_time.png",
+    "identical_eva_feature_mode_error_figure_path": "./output_temp/IE_feature_mode_error.png",
+    "identical_eva_feature_mode_total_match_figure_path": "./output_temp/IE_feature_mode_total_match.png",
+    "identical_eva_feature_mode_percentage_match_figure_path": "./output_temp/IE_feature_mode_percentage_match.png",
+    "identical_eva_feature_mode_std_figure_path": "./output_temp/IE_feature_mode_std.png",
+    "identical_eva_feature_mode_statistical_figure_path": "./output_temp/IE_feature_mode_statistical.png",
+
+    "identical_eva_match_threshold_error_figure_path": "./output_temp/IE_match_threshold_error.png",
+    "identical_eva_match_threshold_percentage_match_figure_path": "./output_temp/IE_match_threshold_percentage_match.png",
+    "identical_eva_match_threshold_std_figure_path": "./output_temp/IE_match_threshold_std.png",
+    "identical_eva_match_threshold_statistical_figure_path": "./output_temp/IE_match_threshold_statistical.png",
+
+    "identical_eva_single_distort_error_figure_path": "./output_temp/IE_single_distort_error.png",
+    "identical_eva_single_distort_time_figure_path": "./output_temp/IE_single_distort_time.png",
+    "identical_eva_single_distort_std_figure_path": "./output_temp/IE_single_distort_std.png",
+    "identical_eva_single_distort_statistical_figure_path": "./output_temp/IE_single_distort_statistical.png",
+    "identical_eva_single_distort_total_match_figure_path": "./output_temp/IE_single_distort_total_match.png",
+    "identical_eva_single_distort_percentage_match_figure_path": "./output_temp/IE_single_distort_percentage_match.png",
+
+
+    "heatmap_folder_path": "./output_temp/",
+
+
+
+    "feature_mode": [
+        "BRISK",
+        "'SIFT' || 'denseSIFT'|| 'ORB' || 'BRISK' || 'AKAZE' -- The method to extract features."
+    ],
+    "match_mode": [
+        "Brute_force",
+        "'FLANN' || 'Brute_force' -- The method to match the features."
+    ],
+    "match_threshold_adaptive_mode": [
+        false,
+        "'true' || 'false' -- Whether to adaptively choose match_threshold value. NOT IN USE NOW"
+    ],
+    "homo_mode":[
+        "RANSAC",
+        5.0,
+        2000,
+        0.99,
+        "'0' or 'RANSAC' -- The method for homography estimation.",
+        "Default=3.0 -- ransacReprojThreshold:  An optional parameter that specifies the maximum allowed reprojection error to consider a point as an inlier during RANSAC",
+        "maxIters",
+        "confidence"
+    ],
+    "distort_mode": [
+        "linear",
+        "'linear' || 'nonlinear' -- Used for identical evaluation."
+    ],
+
+
+    "step_size": [
+        50,
+        "Default=50 -- Used for denseSIFT and keypoint-grid of evaluation"
+    ],
+    "match_threshold": [
+        0.3,
+        "Default=0.8 -- The threshold value of distance to filter matches"
+    ],
+    
+
+    "scale_rate_rand_val": [
+        0.9,
+        1.0
+    ],
+    "rotation_rate_rand_val": [
+        -10,
+        10
+    ],
+    "translate_rate_rand_val": [
+        -0.2,
+        0.2
+    ],
+    "intensity_rate_rand_val": [
+        -50,
+        50
+    ],
+    "scale_rate_constant": 1.0,
+    "rotation_rate_constant": 0,
+    "translate_rate_constant": 0,
+    "intensity_rate_constant": -100,
+    "checkerboard_stepsize": 200,
+
+
+    "if_scale_rate_rand": false,
+    "if_rotation_rate_rand": false,
+    "if_translate_rate_rand": false,
+    "if_intensity_rate_rand": false,
+
+    "if_change_intensity": false,
+    "if_change_intensity_checkerboard": false,
+
+
+    "eva_mode": [
+        "Other",
+        "'Other' || 'match_threshold' || 'scale' || 'scale2' || 'stepsize'|| 'feature_comparison' || 'single_distort_scale' || 'single_distort_rotate' || 'single_distort_translate' || 'single_distort_intensity' || 'single_distort_intensity_checkerboard' -- 'Other' is for running <alignment.py> or <identical_eva.py>"
+    ],
+
+
+    "experiment_num": [
+        10,
+        "Default=5. Number of the multi identical evaluation experiments"
+    ],
+    "eva_rate_match_threshold": [
+        0.1,
+        "Default=0.1 -- e.g. Update the match_threshold by -0.1 of the current value."
+    ],
+    "eva_rate_scale": [
+        0.5,
+        "Default=0.5 -- e.g. Update the width, height, and stepsize by *0.5 of the current value."
+    ],
+    "eva_rate_scale2": [
+        0.5,
+        "Default=0.5 -- e.g. Update the width, height, and stepsize by *0.5 of the current value."
+    ],
+    "eva_rate_stepsize": [
+        0.5,
+        "Default=0.5 -- e.g. Update stepsize by *0.5 of the current value."
+    ],
+    "feature_comparison_experiment_modes": [
+        "SIFT",
+        "denseSIFT",
+        "ORB",
+        "BRISK",
+        "AKAZE",
+        "Compare different feature matching algorithms, referring to identical_evaluation_feature_comparison.py"
+    ],
+    "eva_rate_single_distort": [
+        0.05,
+        "Default=0.1 for scale or translate; Default=10 for rotation; Default 10 for intensity; -- e.g. Update scale by -0.1 of the current scale."
+    ]
+} 
